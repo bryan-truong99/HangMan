@@ -1,12 +1,23 @@
+
 #Prompts the user for the amount of incorrect attempts they want
 def incorrect_attempts():
-    num_attempts = input('How many incorrect attempts would you like? [1-25]')
+    while True:
+        num_attempts =
+        input('How many incorrect attempts would you like? [1-25]')
 
-    if num_attempts in range (1,25):
-        continue
+        try:
+            num_attempts = int(num_attempts)
 
-    else:
-        print(f'{num_attempts} is not a valid integer')
+            if num_attempts in range (1,26):
+                return num_attempts
+
+            else:
+                print(f'{num_attempts} is not a valid integer')
+                num_attempts=
+                input('How many incorrect attempts would you like? [1-25]')
+
+        except:
+                print(f'{num_attempts} is not a valid integer')
 
 
 if __name__ == '__main__':
