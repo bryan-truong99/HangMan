@@ -41,6 +41,9 @@ def select_min_word_length():
         except:
             print(f'{word_length} is not a valid integer')
 
+def letter_check(letter,word):
+    
+
 
 def play_hangman():
     print('Starting a game of Hangman...')
@@ -49,7 +52,11 @@ def play_hangman():
     word = word_gen(word_length)
 
     while True:
-        print
+        print(f'Word: {PUT_WORD_ASTERISKS_HERE}')
+        print(f'Attempts Remaining: {num_attempts}')
+        guessed_letter=input('Guess the next letter: ')
+        print(some_fxn(guessed_letter,word))
+
 
 
 if __name__ == '__main__':
