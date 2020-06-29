@@ -42,7 +42,12 @@ def select_min_word_length():
             print(f'{word_length} is not a valid integer')
 
 def letter_check(letter,word):
-    
+    if letter in word:
+        print(f'{letter} is in the word!')
+        return True
+    else:
+        print(f'{letter} is NOT in the word!')
+        return False
 
 
 def play_hangman():
@@ -55,9 +60,11 @@ def play_hangman():
         print(f'Word: {PUT_WORD_ASTERISKS_HERE}')
         print(f'Attempts Remaining: {num_attempts}')
         guessed_letter=input('Guess the next letter: ')
-        print(some_fxn(guessed_letter,word))
+        letter_check(guessed_letter,word)
 
 
 
 if __name__ == '__main__':
     print('Starting a game of Hangman...')
+    cool=letter_check('d','cool')
+    print(cool)
