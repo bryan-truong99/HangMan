@@ -1,3 +1,4 @@
+from WordGenerator import word_gen
 
 # Prompts the user for the amount of incorrect attempts they want
 def select_incorrect_attempts():
@@ -63,7 +64,7 @@ def play_hangman():
         letter_outcome=letter_check(guessed_letter,word)
 
         if letter_outcome:
-            as
+            x = 1
         else:
             continue
 
