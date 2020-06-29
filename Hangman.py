@@ -1,36 +1,38 @@
 
-#Prompts the user for the amount of incorrect attempts they want
+# Prompts the user for the amount of incorrect attempts they want
 def select_incorrect_attempts():
     while True:
 
-        num_attempts =
-        input('How many incorrect attempts would you like? [1-25]')
+        num_attempts=input('How many incorrect \
+        attempts would you like? [1-25] ')
 
-        #Sees if user input is an integer, prompts again if not
+        # Sees if user input is an integer, prompts again if not
         try:
             num_attempts = int(num_attempts)
 
-            #Sees if user input is within the range, prompts again if not
-            if num_attempts in range (1,26):
+            # Sees if user input is within the range, prompts again if not
+            if num_attempts in range(1, 26):
                 return num_attempts
 
             else:
                 print(f'{num_attempts} is not an integer within the range')
 
         except:
-                print(f'{num_attempts} is not a valid integer')
+            print(f'{num_attempts} is not a valid integer')
 
-#Prompts the user for the word length they want
+# Prompts the user for the word length they want
+
+
 def select_min_word_length():
     while True:
-        word_length = input('What minimum word length would you like? [1-16]')
+        word_length = input('What minimum word length would you like? [1-16] ')
 
-        #Checks if user input is integer
+        # Checks if user input is integer
         try:
             word_length = int(word_length)
 
-            #Checks if integer is within range
-            if word_length in range(1,17):
+            # Checks if integer is within range
+            if word_length in range(1, 17):
                 return word_length
 
             else:
@@ -40,7 +42,15 @@ def select_min_word_length():
             print(f'{word_length} is not a valid integer')
 
 
+def play_hangman():
+    print('Starting a game of Hangman...')
+    num_attempts = select_incorrect_attempts()
+    word_length = select_min_word_length()
+    word = word_gen(word_length)
+
+    while True:
+        print
+
 
 if __name__ == '__main__':
     print('Starting a game of Hangman...')
-    incorrect_attempts()
