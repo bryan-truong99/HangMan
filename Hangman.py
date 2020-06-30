@@ -50,12 +50,37 @@ def letter_check(letter,word):
         print(f'{letter} is NOT in the word!')
         return False
 
+#Returns the censored word
+def word_censor(letter, word, censored_word):
+    temp=[]
+    cen_word=censored_word
+    if cen_word==None
+        cen_word=""
+        for char in word:
+            cen_word += "*"
+
+    for idx, char in enumerate(word):
+
+        if letter==x:
+            temp.append(idx)
+
+    for index in temp:
+        cen_word[index]=letter
+
+
+
+
+
+
+
+    return cen_word
 
 def play_hangman():
     print('Starting a game of Hangman...')
     num_attempts = select_incorrect_attempts()
     word_length = select_min_word_length()
     word = word_gen(word_length)
+    cen_word = None
 
     while True:
         print(f'Word: {PUT_WORD_ASTERISKS_HERE}')
@@ -64,7 +89,7 @@ def play_hangman():
         letter_outcome=letter_check(guessed_letter,word)
 
         if letter_outcome:
-            x = 1
+
         else:
             continue
 
