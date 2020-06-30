@@ -97,6 +97,7 @@ def play_hangman():
         #Checks to see if letter was already used
         if guessed_letter in letters_used:
             print('You have already guessed that letter.')
+            letter_outcome = True
         else:
             letters_used.append(guessed_letter)
             letter_outcome = letter_check(guessed_letter, word)
